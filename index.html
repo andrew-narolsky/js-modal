@@ -8,13 +8,21 @@
 <body>
     <div class="container">
         <h1>JS modal</h1>
-        <button class="open-modal" data-modal="#modal">open modal</button>
+        <button class="open-modal" data-modal="#modal_1">open modal 1</button>
+        <button class="open-modal" data-modal="#modal_2">open modal 2</button>
     </div>
     <div class="overlay">
-        <div class="modal" id="modal">
-            <span class="close-modal" data-modal="#modal"></span>
+        <div class="modal" id="modal_1">
+            <span class="close-modal" data-modal="#modal_1"></span>
             <div class="modal-content">
-                <h3>Help me choose a service</h3>
+                <h3>Modal 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consectetur dicta eligendi, enim eveniet, facere id in iusto, maxime nam neque nulla omnis optio quam quia quis saepe? Architecto blanditiis dolorem doloribus dolorum, ducimus earum eos fugiat labore laboriosam magnam necessitatibus nihil nobis quis rem, repudiandae rerum, sequi totam voluptatibus!</p>
+            </div>
+        </div>
+        <div class="modal" id="modal_2">
+            <span class="close-modal" data-modal="#modal_2"></span>
+            <div class="modal-content">
+                <h3>Modal 2</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consectetur dicta eligendi, enim eveniet, facere id in iusto, maxime nam neque nulla omnis optio quam quia quis saepe? Architecto blanditiis dolorem doloribus dolorum, ducimus earum eos fugiat labore laboriosam magnam necessitatibus nihil nobis quis rem, repudiandae rerum, sequi totam voluptatibus!</p>
             </div>
         </div>
@@ -22,7 +30,7 @@
     <script src="js/script.min.js"></script>
     <script>
         let modal = new Modal({
-            selector: '.open-modal',
+            selectors: '.open-modal',
         });
         modal.init();
     </script>
