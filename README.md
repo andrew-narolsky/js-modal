@@ -1,0 +1,6 @@
+# JS modal
+
+Init modal
+```
+
+```
