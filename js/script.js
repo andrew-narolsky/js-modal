@@ -8,11 +8,11 @@ const Modal = function(options) {
     }
 
     this.openModal = function () {
-        for (let selector in this.selectors) {
-            if (this.selectors.hasOwnProperty(selector)) {
-                this.selectors[selector].addEventListener('click',  () => {
+        for (let $selector in this.selectors) {
+            if (this.selectors.hasOwnProperty($selector)) {
+                this.selectors[$selector].addEventListener('click',  () => {
                     this.body.classList.add('open__modal');
-                    let attr = this.selectors[selector].getAttribute('data-modal');
+                    let attr = this.selectors[$selector].getAttribute('data-modal');
                     let modal = document.querySelector(attr);
                     setTimeout(() => {
                         modal.classList.add('open__modal__window');
@@ -23,11 +23,11 @@ const Modal = function(options) {
     }
 
     this.closeModal = function () {
-        let closeButtons = document.querySelectorAll('.close-modal');
-        for (let closeButton in closeButtons) {
-            if (closeButtons.hasOwnProperty(closeButton)) {
-                closeButtons[closeButton].addEventListener('click',  () => {
-                    let attr = closeButtons[closeButton].getAttribute('data-modal');
+        let $closeButtons = document.querySelectorAll('.close-modal');
+        for (let $closeButton in $closeButtons) {
+            if ($closeButtons.hasOwnProperty($closeButton)) {
+                $closeButtons[$closeButton].addEventListener('click',  () => {
+                    let attr = $closeButtons[$closeButton].getAttribute('data-modal');
                     let modal = document.querySelector(attr);
                     modal.classList.remove('open__modal__window');
                     setTimeout(() => {
