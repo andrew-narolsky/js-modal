@@ -2,8 +2,7 @@
 
 Init modal
 ```
-let modal = new Modal({
-    selector: 'button',
+new Modal({
+    selectors: '.open-modal',
 });
-modal.init();
 ```
